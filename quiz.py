@@ -8,10 +8,17 @@ def main():
     # Criar a janela principal
     root = tk.Tk()
     root.title("Quiz App")  # Título da janela
-    root.geometry("400x200")  # Define o tamanho da janela (opcional)
+    root.geometry("1600x1600")  # Define o tamanho da janela (opcional)
+    root.configure(bg="black")  # Define o fundo da janela como preto
 
     # Adicionar o texto "Welcome to Quiz"
-    welcome_label = tk.Label(root, text="Welcome to Quiz", font=("Arial", 24, "bold"))
+    welcome_label = tk.Label(
+        root,
+        text="Welcome to Quiz",
+        font=("Arial", 24, "bold"),
+        fg="white",  # Cor do texto (branco)
+        bg="black"   # Cor do fundo do texto (mesmo que o fundo da janela)
+    )
     welcome_label.pack(pady=50)  # Centraliza o texto e adiciona espaçamento vertical
 
     # Iniciar o loop principal da interface gráfica
