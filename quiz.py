@@ -23,7 +23,10 @@ def main():
         {"question": "What is the smallest prime number?", "options": ["2", "1", "3", "5", "7", "11", "13"], "answer": "2"},
         {"question": "Which ocean is the largest?", "options": ["Pacific", "Atlantic", "Indian", "Arctic", "Southern", "Mediterranean", "Black Sea"], "answer": "Pacific"},
         {"question": "Who painted the Mona Lisa?", "options": ["Da Vinci", "Van Gogh", "Picasso", "Monet", "Michelangelo", "Rembrandt", "Raphael"], "answer": "Da Vinci"},
-        {"question": "What is the speed of light?", "options": ["299,792 km/s", "300,000 km/s", "150,000 km/s", "200,000 km/s", "100,000 km/s", "250,000 km/s", "350,000 km/s"], "answer": "299,792 km/s"}
+        {"question": "What is the speed of light?", "options": ["299,792 km/s", "300,000 km/s", "150,000 km/s", "200,000 km/s", "100,000 km/s", "250,000 km/s", "350,000 km/s"], "answer": "299,792 km/s"},
+        {"question": "Who is the main character of the TV show 'El Chavo'?", "options": ["Doña Florinda", "Godínez", "Profesor Girafales", "Don Ramón", "Chavo", "Quico", "Chilindrina"], "answer": "Chavo"},
+        {"question": "What is the scientific name of the brazilian tree 'manacá-da-serra'?", "options": ["Manaca serrarius", "Tibouchina urvilleana", "Tibouchina mutabilis", "Tibouchina corundus", "Manaca manacapuru", "Sururu serrarius", "Melindra surriaris"], "answer": "Tibouchina mutabilis"},
+        {"question": "What is the academically used name for the liquid expelled by urban solid waste?", "options": ["leachate", "chorum", "trashate", "trash liquid", "chorumme", "liquid waste", "liquid trash"], "answer": "leachate"}
     ]
 
     # Shuffle questions / Embaralha as perguntas
