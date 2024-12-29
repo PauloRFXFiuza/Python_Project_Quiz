@@ -2,6 +2,7 @@
 Projeto Quiz'''
 
 import tkinter as tk
+import random
 
 # Main function / Função principal
 def main():
@@ -25,18 +26,30 @@ def main():
         {"question": "What is the speed of light?", "options": ["299,792 km/s", "300,000 km/s", "150,000 km/s", "200,000 km/s", "100,000 km/s", "250,000 km/s", "350,000 km/s"], "answer": "299,792 km/s"}
     ]
 
+    # Shuffle questions / Embaralha as perguntas
+    random.shuffle(questions)
+
     # Score and question index / Pontuação e índice da pergunta
     score = [0]  # Using a list to allow modification within nested functions / Usando lista para modificar dentro de funções aninhadas
     current_question_index = [0]
 
+    # Global result label / Rótulo global para exibir resultado
+    global result_label
+    result_label = None
+
     # Function to display the next question / Função para exibir a próxima pergunta
     def display_question():
+        global result_label
+
         # Clear the screen / Limpa a tela
         for widget in root.winfo_children():
             widget.destroy()
 
         # Get the current question / Obtém a pergunta atual
         question_data = questions[current_question_index[0]]
+
+        # Shuffle options / Embaralha as opções
+        random.shuffle(question_data["options"])
 
         # Display the question / Exibe a pergunta
         question_label = tk.Label(
@@ -63,7 +76,10 @@ def main():
                 fg="white",
                 bg="black",
                 selectcolor="gray",
-                wraplength=800
+                wraplength=800,
+                indicatoron=0,  # Remove the default radio button indicator / Remove o indicador padrão
+                height=1,  # Increase the height of the button / Aumenta a altura do botão
+                width=20  # Increase the width of the button / Aumenta a largura do botão
             )
             rb.pack(anchor="w", padx=50)
 
